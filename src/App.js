@@ -1,25 +1,78 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { useCallback } from 'react';
+import  "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from './components/Navbar';
+import "./App.css" ;
+import Header from "./components/Header";
+import Particles from "react-tsparticles";
+
+
+
+
+
+
+
+
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div>
+      <Particles
+      className='particles-canvas'
+        options={{
+          particles: {
+            color: {
+                value: "#F26F20",
+            },
+            links: {
+                color: "#F26F20",
+                distance: 150,
+                enable: true,
+                opacity: 0.5,
+                width: 1,
+            },
+            move: {
+                direction: "none",
+                enable: true,
+                outModes: {
+                    default: "bounce",
+                },
+                random: false,
+                speed: 6,
+                straight: false,
+            },
+            number: {
+                density: {
+                    enable: true,
+                    area: 800,
+                },
+                value: 80,
+            },
+            opacity: {
+                value: 0.5,
+            },
+            shape: {
+                type: "circle",
+            },
+            size: {
+                value: { min: 1, max: 5 },
+            },
+        },
+        detectRetina: true,
+    }}
+
+
+
+      
+        
+      />
+      <Navbar/>
+      <Header/>
+      </div>    
+  
+  )
 }
 
-export default App;
+export default App
+

@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+
+/*****************googlefonts************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto Condensed", sans-serif;
+  
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+    --primary-white:#ffffff;
+    --primary-gray:#6C757D;
+    --primary-orange:#F26F20;
+    --primary-darkOrange: #F36B21;
+    --primary-hover:#F05922
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/***************************Navbar**********************************/
+.logo{
+    width: 9.25rem;
+}
+/************************MENU LINKS***********************************/
+nav{
+    z-index: 2;
+}
+nav a.nav-link
+{
+    cursor: pointer;
+    color:var(--primary-white) !important;
+}
+nav ul li
+{
+    text-transform: uppercase;
+    margin-right: 0.3rem;
+}
+.navbar-brand{
+    max-width: 17.25rem;
+    padding: 0 !important;
+    height: 6rem !important;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width:768px) {
+    .navbar-brand{
+        width: 7rem;
+    }
+    
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-nav > li > a
+{
+    border-top: 0.1875rem solid var(--primary-gray);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus
+
+{
+ border-top: 0.1875rem solid var(--primary-orange);
 }
+
+/*********************Header*************************************/
+.header-wraper
+{
+    position: relative;
+    background-image: url(./laptop.jpg);
+    background-size: cover;
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+
+}
+
+.overlay
+{
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.68);
+    
+}
+
+.main-info
+{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+   
+}
+
+.main-info h1
+{
+    color:var(--primary-orange);
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+
+/*******************Typed Text***************************/
+.Typed-Text
+{
+    font-size: 2rem;
+    color: var(--primary-white);
+
+}
+@media (max-width:768px) {
+    .main-info h1{
+        font-size: 1.7rem !important;
+    }
+    .Typed-Text{
+        font-size: 1.3rem !important;
+    }
+    
+}
+
+/*******************Header Button*************/
+
+.btn-main-info
+{
+    text-transform: uppercase;
+    border:1px solid var(--primary-darkOrange);
+    border-radius: 0;
+    padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+    color:var(--primary-white);
+    margin:2rem;
+    text-decoration: none;
+
+}
+.btn-main-info:hover
+{
+    background-color: var(--primary-hover);
+    transition: 0.3s ease-in-out;
+}
+
+/******************particles***************************/
+#tsparticles {
+    position:absolute;
+    width: 95vw;
+    height: 95vh;
+    z-index: 1;
+
+}
+
+@media (max-width:768px) {
+   .particles-canvas
+   {
+        display: none;
+   }  
+}
+ 
+
+
+
